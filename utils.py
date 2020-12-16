@@ -6,6 +6,7 @@ import numpy as np
 import nltk
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from sklearn.metrics import accuracy_score
 
 from sklearn.naive_bayes import CategoricalNB
 
