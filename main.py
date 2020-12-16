@@ -6,10 +6,8 @@ from utils import clean_text, CleanTextTransformer
 
 from pydantic.main import BaseModel
 
-from fastapi import FastAPI
-# from fastapi.encoders import jsonable_encoder
-# from fastapi.responses import JSONResponse
 from fastapi import FastAPI, Response
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
@@ -44,3 +42,19 @@ def predict(parameters: PredictRequest):
     response = {"output": "positive" if y else "negative"}
 
     return response
+
+
+origins = [
+    "http://localhost.tiangolo.com",
+    "https://localhost.tiangolo.com",
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
