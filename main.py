@@ -46,8 +46,9 @@ def predict(parameters: PredictRequest):
 
 origins = [
     "http://localhost",
-    "http://localhost:3000"
-    "https://rholandtwitdev.herokuapp.com"
+    "http://localhost:3000",
+    "http://0.0.0.0:8008",
+    "https://rholandtwitdev.herokuapp.com",
     "http://localhost:8080",
 ]
 
