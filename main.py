@@ -50,6 +50,7 @@ origins = [
     "http://0.0.0.0:8008",
     "https://rholandtwitdev.herokuapp.com",
     "http://localhost:8080",
+    "https://analizer.netlify.app",
 ]
 
 app.add_middleware(
